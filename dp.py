@@ -55,8 +55,9 @@ def get_lcs_length(str1, str2):
 
 # 5.背包问题knapsack
 def knapsack(w, v, C):
-    import numpy as np
-    mem = np.zeros((len(w) + 1, C + 1))
+    # import numpy as np
+    # mem = np.zeros((len(w) + 1, C + 1))
+    mem = [[0 for j in range(C + 1)] for i in range(len(w) + 1)]
     for i in range(1, len(w) + 1):
         value = v[i - 1]
         weight = w[i - 1]
